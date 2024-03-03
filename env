@@ -13,20 +13,20 @@ UVICORN_PORT = 7879
 
 
 XRAY_JSON = "/var/lib/marzban/xray_config.json"
-# XRAY_SUBSCRIPTION_URL_PREFIX = "https://example.com"
+#XRAY_SUBSCRIPTION_URL_PREFIX = "https://ravavpn.my.id"
 # XRAY_EXECUTABLE_PATH = "/var/lib/marzban/core/xray"
 # XRAY_ASSETS_PATH = "/var/lib/marzban/assets"
 # XRAY_FALLBACKS_INBOUND_TAG = "INBOUND_X"
 
 
-# TELEGRAM_API_TOKEN = 123456789:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-# TELEGRAM_ADMIN_ID = 987654321
+TELEGRAM_API_TOKEN = 6159420338:AAFYFkZ8g79vp0GQTTbgbvnsvIQC2MR2wz8
+TELEGRAM_ADMIN_ID = 431283315
 # TELEGRAM_PROXY_URL = "http://localhost:8080"
 
 
 # CLASH_SUBSCRIPTION_TEMPLATE="clash/my-custom-template.yml"
-SUBSCRIPTION_PAGE_TEMPLATE="subscription/index.html"
-HOME_PAGE_TEMPLATE="home/index.html"
+#SUBSCRIPTION_PAGE_TEMPLATE="/opt/marzban/subscription/index.html"
+# HOME_PAGE_TEMPLATE="home/index.html"
 # SUBSCRIPTION_PAGE_LANG="en"
 
 SQLALCHEMY_DATABASE_URL = "sqlite:////var/lib/marzban/db.sqlite3"
@@ -37,4 +37,4 @@ SQLALCHEMY_DATABASE_URL = "sqlite:////var/lib/marzban/db.sqlite3"
 # WEBHOOK_ADDRESS = "http://127.0.0.1:9000/"
 # WEBHOOK_SECRET = "something-very-very-secret"
 # VITE_BASE_API="https://example.com/api/"
-JWT_ACCESS_TOKEN_EXPIRE_MINUTES = 0
+JWT_ACCESS_TOKEN_EXPIRE_MINUTES = 5
