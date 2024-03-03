@@ -2,7 +2,7 @@
   "log": {
     "access": "/var/lib/marzban/access.log",
     "error": "/var/lib/marzban/error.log",
-    "loglevel": "warning"
+    "loglevel": "debug"
   },
   "dns": {
     "servers": [
@@ -23,16 +23,6 @@
           "dns-in"
         ],
         "outboundTag": "dns-out"
-      },
-      {
-        "domain": [
-          "geosite:spotify",
-          "geosite:netflix",
-          "geosite:openai"
-        ],
-        "outboundTag": "WARP",
-        "network": "tcp,udp",
-        "type": "field"
       },
       {
         "type": "field",
@@ -232,18 +222,6 @@
         "nonIPQuery": "skip"
       },
       "tag": "dns-out"
-    },
-    {
-      "tag": "WARP",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "127.0.0.1",
-            "port": 40000
-          }
-        ]
-      }
     }
   ],
   "policy": {
