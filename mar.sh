@@ -132,6 +132,9 @@ yes | sudo ufw enable
 #install database
 wget -O /var/lib/marzban/db.sqlite3 "https://github.com/ravatz/MarLing/raw/main/db.sqlite3"
 
+#install Theme
+mkdir -p /opt/marzban/subscription
+wget -O /opt/marzban/subscription/index.html "https://raw.githubusercontent.com/ravatz/MarLing/main/template.html"
 #install WARP Proxy
 #wget -O /root/warp "https://raw.githubusercontent.com/hamid-gh98/x-ui-scripts/main/install_warp_proxy.sh"
 #sudo chmod +x /root/warp
