@@ -69,6 +69,17 @@ chmod +x /usr/bin/profile
 apt install neofetch -y
 wget -O /usr/bin/cekservice "https://raw.githubusercontent.com/ravatz/MarLing/main/cekservice.sh"
 chmod +x /usr/bin/cekservice
+wget -O /usr/bin/send "https://raw.githubusercontent.com/ravatz/MarLing/main/send"
+chmod +x /usr/bin/send
+wget -O /usr/bin/send "https://raw.githubusercontent.com/ravatz/MarLing/main/send_dbvnstat"
+chmod +x /usr/bin/send_dbvnstat
+
+crontab -l > mycron
+echo "0 3 * * * bash /root/send" >> mycron
+echo "0 3 * * * bash /root/send_dbvnstat" >> mycron
+crontab mycron
+rm mycron
+
 
 #install compose
 wget -O /opt/marzban/docker-compose.yml "https://raw.githubusercontent.com/ravatz/MarLing/main/docker-compose.yml"
@@ -139,6 +150,7 @@ wget -O /opt/marzban/index.html "https://raw.githubusercontent.com/ravatz/MarLin
 #wget -O /root/warp "https://raw.githubusercontent.com/hamid-gh98/x-ui-scripts/main/install_warp_proxy.sh"
 #sudo chmod +x /root/warp
 #sudo bash /root/warp -y 
+
 
 #finishing
 apt autoremove -y
