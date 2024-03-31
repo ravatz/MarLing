@@ -148,5 +148,6 @@ cd /opt/marzban
 docker compose down && docker compose up -d
 cd
 rm /root/mar.sh
+systemctl restart nginx.service
 
 
