@@ -71,12 +71,12 @@ wget -O /usr/bin/cekservice "https://raw.githubusercontent.com/ravatz/MarLing/ma
 chmod +x /usr/bin/cekservice
 wget -O /usr/bin/send "https://raw.githubusercontent.com/ravatz/MarLing/main/send"
 chmod +x /usr/bin/send
-wget -O /usr/bin/send "https://raw.githubusercontent.com/ravatz/MarLing/main/send_dbvnstat"
+wget -O /usr/bin/send_dbvnstat "https://raw.githubusercontent.com/ravatz/MarLing/main/send_dbvnstat"
 chmod +x /usr/bin/send_dbvnstat
 
 crontab -l > mycron
-echo "0 3 * * * bash /root/send" >> mycron
-echo "0 3 * * * bash /root/send_dbvnstat" >> mycron
+echo "0 3 * * * send" >> mycron
+echo "0 3 * * * send_dbvnstat" >> mycron
 crontab mycron
 rm mycron
 
