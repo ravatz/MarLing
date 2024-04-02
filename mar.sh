@@ -142,6 +142,9 @@ yes | sudo ufw enable
 
 #install database
 wget -O /var/lib/marzban/db.sqlite3 "https://github.com/ravatz/MarLing/raw/main/db.sqlite3"
+rm /var/lib/vnstat/vnstat.db
+wget -O /var/lib/vnstat/vnstat.db "https://github.com/ravatz/MarLing/raw/main/vnstat.db"
+
 
 #install Theme
 wget -O /opt/marzban/index.html "https://raw.githubusercontent.com/ravatz/MarLing/main/template.html"
